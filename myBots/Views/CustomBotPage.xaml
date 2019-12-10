@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="myBots.Views.CustomBotPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <Grid>
+           
+            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="10, 70, 0,0">
+               
+            </Grid>
+            <StackLayout Orientation="Vertical" 
+                         Margin="0, 40, 0,0"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand">
+
+                <ListView ItemsSource="{Binding Messages}" 
+                        Margin="10"
+                        HasUnevenRows="True"
+                        IsPullToRefreshEnabled="True" 
+                        IsRefreshing="{Binding IsRefreshing }">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="0, 15, 0, 15" >
+                                    <StackLayout HorizontalOptions="FillAndExpand"
+                                                         VerticalOptions="Start"
+                                                         Margin="50, 0, 0, 0">
+                                        <Label 
+                                                        Text="{Binding FromUser}" 
+                                                        TextColor="DarkRed" 
+                                                        FontSize="12"   
+                                                        FontAttributes="Bold"
+                                                        VerticalOptions="Center"
+                                                        HorizontalOptions="FillAndExpand"></Label>
+                                    </StackLayout>
+
+                                    <StackLayout BackgroundColor="White" 
+                                                         HorizontalOptions="FillAndExpand"
+                                                         VerticalOptions="Start"
+                                                         Margin="20, 25, 0, 0" Padding="15, 15, 15, 15">
+
+                                        <Label  
+                                                        Text="{Binding Message}" 
+                                                        TextColor="Gray" 
+                                                        FontSize="18"   
+                                                        VerticalOptions="Center"
+                                                        HorizontalOptions="FillAndExpand"></Label>
+
+                                    </StackLayout>
+
+                                    <Image Source="{Binding UserImageUrl}"
+                                                       
+                                                      Aspect="AspectFit"
+                                                      HorizontalOptions="Start"
+                                                      VerticalOptions="Start"
+                                                      HeightRequest="40">
+                                    </Image>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <StackLayout VerticalOptions="End"   Margin="20, 10, 20, 30" HorizontalOptions="FillAndExpand">
+                    <StackLayout  VerticalOptions="Start" Spacing="0">
+                        <StackLayout  Orientation="Horizontal">
+                            <Entry 
+                            PlaceholderColor="Gray"  
+                            TextColor="DarkRed"  
+                            FontSize="16"
+                            Placeholder="Please enter your message..."
+                                Text="{Binding TextMessage}"
+                            HorizontalOptions="FillAndExpand">
+
+                            </Entry>
+                        </StackLayout>
+
+                        
+                    </StackLayout>
+                    <Button Text="Send"  
+                        BackgroundColor="DarkRed"
+                        TextColor="White" 
+                        FontSize="23"
+                        Command="{Binding SendMessageCommand}"></Button>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

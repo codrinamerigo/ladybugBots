@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myBots.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,16 @@ using Xamarin.Forms.Xaml;
 namespace myBots.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class myBotWebViewPage : ContentPage
+    public partial class CustomBotPage : ContentPage
     {
-        public myBotWebViewPage(string token)
+        private BotViewModel ViewModel;
+
+        public CustomBotPage()
         {
             InitializeComponent();
 
-            
-
-            string botWebViewUrl = "https://webchat.botframework.com/embed/LadyBugBot?s=" + token;
-            this.myBotWebView.Source = botWebViewUrl;
-            
+            ViewModel = new BotViewModel();
+            BindingContext = ViewModel;
         }
     }
 }

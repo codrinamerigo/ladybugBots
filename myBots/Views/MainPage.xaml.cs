@@ -20,13 +20,14 @@ namespace myBots.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        ItemsViewModel viewModel;
+       
 
         public MainPage()
         {
             InitializeComponent();
+            
 
-            BindingContext = viewModel = new ItemsViewModel();
+           
         }
 
         
@@ -44,7 +45,7 @@ namespace myBots.Views
                 // Get the token from HTTP Request
                 token = await GetBotServiceToken();
             
-            await Navigation.PushAsync(new myBotWebViewPage(token));
+            await Navigation.PushModalAsync(new myBotWebViewPage(token));
         }
 
         private async Task<string> GetBotServiceToken()
@@ -68,6 +69,9 @@ namespace myBots.Views
             return String.Empty;
         }
 
-
+        private async void CustomButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new CustomBotPage());
+        }
     }
 }

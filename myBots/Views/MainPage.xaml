@@ -5,14 +5,28 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    x:Name="BrowseItemsPage"
-    Title="My Bots"
     mc:Ignorable="d">
 
 
 
-    <StackLayout>
-        <Button Clicked="Button_Clicked" Text="SimpleBot" />
+    <StackLayout VerticalOptions="Center">
+        <Button
+            Margin="55,0,55,0"
+            BackgroundColor="white"
+            BorderColor="DarkRed"
+            BorderWidth="1"
+            Clicked="Button_Clicked"
+            Text="Web Chat Bot"
+            TextColor="DarkRed" />
+
+        <Button
+            Margin="55,30,55,0"
+            BackgroundColor="white"
+            BorderColor="DarkRed"
+            BorderWidth="1"
+            Clicked="CustomButton_Clicked"
+            Text="Direct Line Bot"
+            TextColor="DarkRed" />
     </StackLayout>
 
 </ContentPage>

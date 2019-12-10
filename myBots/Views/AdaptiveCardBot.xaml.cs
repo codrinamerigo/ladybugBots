@@ -10,17 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace myBots.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class myBotWebViewPage : ContentPage
+    public partial class AdaptiveCardBot : ContentPage
     {
-        public myBotWebViewPage(string token)
+        public AdaptiveCardBot()
         {
             InitializeComponent();
-
-            
-
-            string botWebViewUrl = "https://webchat.botframework.com/embed/LadyBugBot?s=" + token;
-            this.myBotWebView.Source = botWebViewUrl;
-            
         }
     }
 }
