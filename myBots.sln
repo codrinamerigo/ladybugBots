@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myBots.Android", "myBots.An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myBots.iOS", "myBots.iOS\myBots.iOS.csproj", "{9728EEF3-B1AE-40D4-9D4A-81351B2CA91D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myBots", "myBots\myBots.csproj", "{5E168C9E-25AF-475F-A070-063940878C9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "myBots", "myBots\myBots.csproj", "{5E168C9E-25AF-475F-A070-063940878C9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
