@@ -14,7 +14,7 @@ namespace myBots.Services
         {
             private readonly string _baseBotEndPointAddress = "https://directline.botframework.com";
             private HttpClient _client;
-            private string _directLineKey = "d0LCf3oJzIo.NiiuqOiRI5Gcw3WeOihn_zHAFOmjAuZvnVZFGY_ta8U";
+            private string _directLineKey = Config.DirectLineBot;
             private Conversation _lastConversation = null;
 
             public ChatBotService()

@@ -51,7 +51,7 @@ namespace myBots.Views
         private async Task<string> GetBotServiceToken()
         {
             HttpClient client = new HttpClient();
-            string botKey = "p_dQXb4hwMs.81Bn1XyM0U6trqapfbqNQ08ZyYapJHSDZTJ3CdUuXIk";
+            string botKey = Config.WebChatBot;
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("BotConnector",botKey); //azure secret
 
             var url = new Uri("https://webchat.botframework.com/api/tokens");
