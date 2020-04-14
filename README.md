@@ -12,3 +12,5 @@ Use BotFramework or Azure to create your bot.
 Demo app used during **GlobalAI Bootcamp 2019**
 
 Slides can be found here: http://bit.ly/38O2AC3
+
+blogged on medium
