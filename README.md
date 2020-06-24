@@ -11,6 +11,6 @@ Use BotFramework or Azure to create your bot.
 
 Demo app used during **GlobalAI Bootcamp 2019**
 
-Slides can be found here: http://bit.ly/38O2AC3
+Slides can be found [here]( http://bit.ly/38O2AC3)
 
-blogged on medium
+blogged on [medium](https://medium.com/@codrinamerigo/ai-meets-your-xamarin-forms-app-chatbots-18b0cc90bf93?source=activity---post_recommended)
