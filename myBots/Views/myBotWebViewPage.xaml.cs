@@ -18,7 +18,7 @@ namespace myBots.Views
 
             
 
-            string botWebViewUrl = "https://webchat.botframework.com/embed/LadyBugBot?s=" + token;
+            string botWebViewUrl = "https://webchat.botframework.com/embed/myXamTestBot?s=" + token;
             this.myBotWebView.Source = botWebViewUrl;
             
         }

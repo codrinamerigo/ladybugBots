@@ -83,9 +83,9 @@ namespace myBots.ViewModels
                         {
                             Messages.Add(new ConversationMessage
                             {
-                                FromUser = msgItem.From == "LadyBugBot" ? "LadyBug Bot " : "User",
+                                FromUser = msgItem.From == "myXamTestBot" ? "LadyBug Bot " : "User",
                                 Message = msgItem.Text,
-                                UserImageUrl = msgItem.From == "LadyBugBot" ? "ladybugimg.png" : "user.png" 
+                                UserImageUrl = msgItem.From == "myXamTestBot" ? "ladybugimg.png" : "user.png" 
                             });
                         }
 
